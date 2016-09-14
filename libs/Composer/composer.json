@@ -1,0 +1,16 @@
+{
+    "name": "howard/composer",
+    "description": "plus one",
+    "type": "library",
+    "require": {
+        "pear/db": "dev-trunk"
+    },
+    "license": "howard",
+    "authors": [
+        {
+            "name": "Howard You",
+            "email": "chjh_10171ok@yahoo.com.tw"
+        }
+    ],
+    "minimum-stability": "dev"
+}
