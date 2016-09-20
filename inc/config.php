@@ -1,4 +1,15 @@
 <?php
+
+// 偵錯模式設定
+define("IS_DEBUG", TRUE);
+if (TRUE === IS_DEBUG) {
+    $sysDebug = "getDebugInfo";
+    ini_set("display_errors", 1);
+} else {
+    $sysDebug = "getMessage";
+    ini_set("display_errors", 0);
+}
+
 //----------------------------------------------------------
 // 引入資料庫和伺服器設定
 //----------------------------------------------------------
