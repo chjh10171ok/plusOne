@@ -29,7 +29,6 @@ foreach ($element as $key => $value) {
     }
 }
 
-// 檢查登入紀錄
 //----------------------------------------------------------
 // Open database connection
 //----------------------------------------------------------
@@ -49,6 +48,7 @@ if (!is_array($aryMember)) {
     die('帳號『' . $account . '』尚未註冊資料');
 }
 
+// 比對帳號資料
 if ($aryMember['password'] != hash('sha256', $pwd . $aryMember['passwordSalt'] . $aryMember['accountID'])) {
     $db->disconnect();
     die('密碼錯誤');
@@ -57,6 +57,7 @@ if ($aryMember['password'] != hash('sha256', $pwd . $aryMember['passwordSalt'] .
 // 產生新鹽巴
 $passwordSalt = hash('sha256', uniqid(mt_rand(), TRUE));
 
+// 更新資訊
 $table = 'member';
 $data = array(
     'password' => hash('sha256', $pwd . $passwordSalt . $aryMember['accountID']),
