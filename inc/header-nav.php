@@ -1,4 +1,7 @@
 <?php
+//----------------------------------------------------------
+// 預設未定義常數
+//----------------------------------------------------------
 if (defined(PAGE_TAG)) { define('PAGE_TAG', 'index'); }
 ?>
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
