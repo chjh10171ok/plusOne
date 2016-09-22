@@ -43,7 +43,7 @@ require_once(BASE_ROOT . "/inc/header.php");
              <div class="col-xs-6 col-lg-4">
                 <h2><?php echo htmlspecialchars(trim($row['name'])); ?></h2>
                 <p><?php echo htmlspecialchars(trim($row['introduction'])); ?></p>
-                <p><a role="button" href="#" target="_blank" class="btn btn-default">View details »</a></p>
+                <p><a role="button" href="<?php echo WEB_ROOT . '/' . PAGE_TAG; ?>" target="_blank" class="btn btn-default">View details »</a></p>
             </div>
             <?php endwhile; ?>
             <!-- <div class="col-xs-6 col-lg-4">
